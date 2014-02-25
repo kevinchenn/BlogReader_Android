@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .gradle
 /local.properties
 /.idea/workspace.xml
@@ -33,4 +32,4 @@ proguard/
 *.ipr
 *.iws
 .idea/
->>>>>>> e15f9e94e123895d586dc1266c2904025bb2e7e3
+
