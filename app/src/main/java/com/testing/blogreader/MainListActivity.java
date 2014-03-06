@@ -1,16 +1,29 @@
 package com.testing.blogreader;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.ListActivity;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 
-public class MainListActivity extends ActionBarActivity {
+public class MainListActivity extends ListActivity {
+
+    protected String[] mBlogPostTitles;
+	public static final int NUMBER_OF_POSTS = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_list);
+
+		Resources resources = getResources();
+		mBlogPostTitles = resources.getStringArray(R.array.android_names);
+
+      	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mBlogPostTitles);
+      	setListAdapter(adapter);
+//        String message = getString(R.string.no_items);
+//        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
 
